@@ -5,7 +5,7 @@ const apiUrl = process.env.PAPERCLIP_API_URL || 'http://127.0.0.1:3100';
 const apiKey = process.env.PAPERCLIP_API_KEY;
 const companyId = process.env.PAPERCLIP_COMPANY_ID || '86f22ae7-2a66-4927-93f0-1692998afb8f';
 const taskId = process.env.PAPERCLIP_TASK_ID || '3ba6825c-7388-479e-97c0-0379678952a7';
-const runId = process.env.PAPERCLIP_RUN_ID || '11f3a923-4220-4bda-b830-72b80d23a0c5';
+const runId = process.env.PAPERCLIP_ACTIVE_RUN_ID || '6a94b35f-5d64-4bb0-a99d-97154e47c3a5';
 
 if (!apiKey) {
   console.error('Missing PAPERCLIP_API_KEY');

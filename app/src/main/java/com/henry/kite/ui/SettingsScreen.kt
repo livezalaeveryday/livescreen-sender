@@ -102,6 +102,15 @@ fun SettingsScreen(
                         ),
                     ),
             ) {
+                SettingsSection(title = "โหมดการทำงาน (Device Mode)") {
+                    SettingsRow(
+                        title = "โหมดอุปกรณ์",
+                        summary = "ตัวส่งหน้าจอ AirPlay (Sender Mode)",
+                        supporting = "ตรวจพบประเภทอุปกรณ์อัตโนมัติ: มือถือ/แท็บเล็ต (UI สัมผัส) — สลับเป็นโหมดตัวรับสำหรับทีวีได้",
+                        onClick = null,
+                    )
+                }
+
                 SettingsSection(title = stringResource(R.string.settings_section_video)) {
                     // Resolution labels are too long for a segmented button, which the
                     // spec says must not truncate — so this row opens a picker instead.

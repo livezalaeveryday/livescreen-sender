@@ -72,10 +72,10 @@ async function main() {
   console.log('>>> Installing Live Screen Sender on emulator-5554...');
   adb(`install -r "${apkPath}"`);
 
-  console.log('>>> Launching com.livezala.livescreen.sender clean state...');
-  adb('shell am force-stop com.livezala.livescreen.sender');
+  console.log('>>> Launching com.livezala.livescreen clean state...');
+  adb('shell am force-stop com.livezala.livescreen');
   await sleep(1000);
-  adb('shell am start -n com.livezala.livescreen.sender/com.henry.kite.MainActivity');
+  adb('shell am start -n com.livezala.livescreen/com.henry.kite.MainActivity');
   await sleep(3500);
 
   // 1. CAPTURE DISCOVERY SCREEN

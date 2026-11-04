@@ -12,7 +12,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.livezala.livescreen.sender"
+        applicationId = "com.livezala.livescreen"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
