@@ -1,109 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Kite</string>
+    <string name="app_name" translatable="false">Live Screen</string>
 
-    <string name="discovery_title">Cast to</string>
-    <string name="discovery_subtitle">AirPlay receivers on this Wi-Fi network</string>
-    <string name="discovery_searching">Searching for receivers</string>
-    <string name="discovery_empty_title">No devices found</string>
-    <string name="discovery_empty_body">Check that the Apple TV is switched on and joined to the same Wi-Fi network. AP isolation on some routers blocks mDNS.</string>
+    <string name="discovery_title">Live Screen</string>
+    <string name="discovery_subtitle">สะท้อนจอมือถือขึ้นทีวี AirPlay (แตะทีวีแล้วขึ้นจอทันที)</string>
+    <string name="discovery_searching">กำลังค้นหาทีวีในวง Wi-Fi เดียวกัน...</string>
+    <string name="discovery_empty_title">ไม่พบทีวีในเครือข่าย</string>
+    <string name="discovery_empty_body">โปรดตรวจสอบว่าเปิดทีวีแล้ว และเชื่อมต่อ Wi-Fi วงเดียวกับมือถือเครื่องนี้ (ฟรี 100% ไม่มีโฆษณา ไม่จำกัดเวลา)</string>
 
-    <string name="receiver_paired">Paired</string>
-    <string name="receiver_no_mirroring">Mirroring unsupported</string>
-    <string name="receiver_legacy_pairing">Legacy pairing only</string>
+    <string name="receiver_paired">จับคู่แล้ว</string>
+    <string name="receiver_no_mirroring">ไม่รองรับการสะท้อนจอ</string>
+    <string name="receiver_legacy_pairing">การจับคู่แบบเดิม</string>
 
-    <string name="action_start">Start casting</string>
-    <string name="action_stop">Stop casting</string>
-    <string name="action_forget">Forget device</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="action_confirm">Confirm</string>
-    <string name="action_ok">OK</string>
-    <string name="action_retry">Retry</string>
-    <string name="action_back">Back</string>
+    <string name="action_start">เริ่มสะท้อนหน้าจอ</string>
+    <string name="action_stop">หยุดสะท้อนหน้าจอ</string>
+    <string name="action_forget">ลบอุปกรณ์</string>
+    <string name="action_cancel">ยกเลิก</string>
+    <string name="action_confirm">ยืนยัน</string>
+    <string name="action_ok">ตกลง</string>
+    <string name="action_retry">ลองใหม่</string>
+    <string name="action_back">ย้อนกลับ</string>
 
-    <string name="receiver_actions_title">What would you like to cast?</string>
-    <string name="receiver_action_mirror">Screen with sound</string>
-    <string name="receiver_action_video_only">Screen without sound</string>
-    <string name="receiver_action_audio_only">Sound only</string>
+    <string name="receiver_actions_title">เลือกรูปแบบการส่งภาพ/เสียง</string>
+    <string name="receiver_action_mirror">ภาพหน้าจอพร้อมเสียงระบบ</string>
+    <string name="receiver_action_video_only">เฉพาะภาพหน้าจอ (ไม่ส่งเสียง)</string>
+    <string name="receiver_action_audio_only">เฉพาะเสียงระบบ</string>
 
-    <string name="pin_title">Enter pairing code</string>
-    <string name="pin_body">A four-digit code appears on the screen of %1$s.</string>
-    <string name="pin_label">Pairing code</string>
+    <string name="pin_title">ใส่รหัสจับคู่ AirPlay</string>
+    <string name="pin_body">ใส่รหัส 4 หลักที่แสดงอยู่บนหน้าจอของ %1$s</string>
+    <string name="pin_label">รหัสจับคู่ (PIN)</string>
 
-    <string name="quality_title">Resolution</string>
-    <string name="quality_native">Native</string>
-    <string name="quality_1080p" translatable="false">1080p</string>
-    <string name="quality_720p" translatable="false">720p</string>
+    <string name="quality_title">ความละเอียดภาพ</string>
+    <string name="quality_native">ตามความละเอียดจอเครื่อง</string>
+    <string name="quality_1080p" translatable="false">1080p Full HD</string>
+    <string name="quality_720p" translatable="false">720p HD</string>
     <string name="quality_540p" translatable="false">540p</string>
 
-    <string name="state_connecting">Connecting</string>
-    <string name="state_pairing">Pairing</string>
-    <string name="state_setting_up">Setting up session</string>
-    <string name="state_mirroring">Casting</string>
+    <string name="state_connecting">กำลังเชื่อมต่อกับทีวี...</string>
+    <string name="state_pairing">กำลังจับคู่ AirPlay...</string>
+    <string name="state_setting_up">กำลังเริ่มสตรีมภาพหน้าจอ...</string>
+    <string name="state_mirroring">กำลังสะท้อนหน้าจอขึ้นทีวี</string>
 
     <string name="mirroring_rate_kbps" translatable="false">%1$d kbps</string>
     <string name="mirroring_rate_mbps" translatable="false">%1$.1f Mbps</string>
     <string name="mirroring_resolution" translatable="false">%1$d × %2$d @ %3$d fps</string>
 
-    <string name="error_title">Casting failed</string>
-    <string name="error_repair_needed">The stored pairing is no longer valid. Enter the pairing code again.</string>
+    <string name="error_title">การเชื่อมต่อสิ้นสุด</string>
+    <string name="error_repair_needed">การจับคู่เดิมหมดอายุ โปรดใส่รหัสจับคู่อีกครั้ง</string>
 
-    <string name="notification_channel_name">Casting status</string>
-    <string name="notification_channel_description">Ongoing notification while casting</string>
-    <string name="notification_title">Casting to %1$s</string>
-    <string name="notification_text">Tap to return to Kite</string>
-    <string name="notification_stop">Stop</string>
+    <string name="notification_channel_name">สถานะการสะท้อนหน้าจอ</string>
+    <string name="notification_channel_description">แสดงสถานะขณะสะท้อนหน้าจอขึ้นทีวี</string>
+    <string name="notification_title">กำลังสะท้อนหน้าจอไปยัง %1$s</string>
+    <string name="notification_text">แตะเพื่อกลับเข้าสู่ Live Screen</string>
+    <string name="notification_stop">หยุดแชร์</string>
 
-    <string name="permission_notification_rationale">Notification permission is needed to show casting status.</string>
-    <string name="permission_nearby_rationale">Android 13 and later require the nearby devices permission to find devices on the local network.</string>
+    <string name="permission_notification_rationale">จำเป็นต้องใช้สิทธิ์แจ้งเตือนเพื่อแสดงสถานะขณะสะท้อนหน้าจอ</string>
+    <string name="permission_nearby_rationale">Android 13 ขึ้นไปจำเป็นต้องใช้สิทธิ์อุปกรณ์ใกล้เคียงเพื่อค้นหาทีวีในเครือข่าย</string>
 
     <!-- Settings -->
-    <string name="settings_title">Settings</string>
-    <string name="settings_open">Settings</string>
+    <string name="settings_title">ตั้งค่า</string>
+    <string name="settings_open">ตั้งค่า</string>
 
-    <string name="settings_section_video">Video</string>
+    <string name="settings_section_video">วิดีโอ &amp; การแสดงผล</string>
 
-    <string name="settings_frame_rate">Frame rate</string>
+    <string name="settings_frame_rate">เฟรมเรต (FPS)</string>
 
-    <string name="settings_bit_rate">Bit rate</string>
-    <string name="settings_bit_rate_auto">Auto</string>
-    <string name="settings_bit_rate_manual">Custom</string>
+    <string name="settings_bit_rate">บิตเรต (Bitrate)</string>
+    <string name="settings_bit_rate_auto">อัตโนมัติ (แนะนำ)</string>
+    <string name="settings_bit_rate_manual">กำหนดเอง</string>
     <string name="settings_bit_rate_value" translatable="false">%1$d Mbps</string>
 
-    <string name="settings_section_system">System</string>
-    <string name="settings_section_about">About</string>
-    <string name="settings_battery">Battery optimisation</string>
-    <string name="settings_battery_exempt">Exempt</string>
-    <string name="settings_battery_restricted">Restricted</string>
-    <string name="settings_battery_summary">Doze can stall the stream for seconds at a time</string>
-    <string name="settings_logs">Logs</string>
-    <string name="settings_logs_summary">View or share recent app logs</string>
-    <string name="settings_saved_receivers">Saved receivers</string>
-    <string name="saved_receivers_empty">No saved receivers</string>
-    <string name="saved_receivers_unknown">Unknown receiver</string>
-    <string name="saved_receivers_forget_title">Forget %1$s?</string>
-    <string name="saved_receivers_forget_body">You will need to pair again the next time.</string>
-    <string name="settings_about_version">Version</string>
-    <string name="settings_about_github">GitHub</string>
-    <string name="settings_licenses">Open source licenses</string>
-    <string name="licenses_note">Kite is released under the GNU LGPL-3.0. It is built on these open-source projects:</string>
+    <string name="settings_section_system">ระบบ &amp; พลังงาน</string>
+    <string name="settings_section_about">เกี่ยวกับ Live Screen</string>
+    <string name="settings_battery">การประหยัดแบตเตอรี่ (Doze)</string>
+    <string name="settings_battery_exempt">ยกเว้นแล้ว (แนะนำ)</string>
+    <string name="settings_battery_restricted">ถูกจำกัด</string>
+    <string name="settings_battery_summary">โหมดประหยัดพลังงานอาจทำให้ภาพสะท้อนสะดุดได้</string>
+    <string name="settings_logs">บันทึกการทำงาน (Logs)</string>
+    <string name="settings_logs_summary">ดูหรือแชร์บันทึกการเชื่อมต่อ</string>
+    <string name="settings_saved_receivers">ทีวีที่บันทึกไว้</string>
+    <string name="saved_receivers_empty">ยังไม่มีทีวีที่บันทึกไว้</string>
+    <string name="saved_receivers_unknown">ทีวีที่ไม่รู้จัก</string>
+    <string name="saved_receivers_forget_title">ลืมทีวี %1$s?</string>
+    <string name="saved_receivers_forget_body">คุณจะต้องจับคู่อีกครั้งในการเชื่อมต่อครั้งถัดไป</string>
+    <string name="settings_about_version">เวอร์ชัน</string>
+    <string name="settings_about_github">Livezala Platform</string>
+    <string name="settings_licenses">ใบอนุญาตโอเพนซอร์ส</string>
+    <string name="licenses_note">Live Screen เป็นส่วนหนึ่งของ Livezala Platform พัฒนาขึ้นโดยใช้เทคโนโลยี AirPlay / MediaProjection</string>
 
     <!-- AirPlay 1 (audio-only) and password protection -->
-    <string name="receiver_audio_only">Audio only</string>
-    <string name="state_password_required">Password required</string>
-    <string name="state_streaming_audio">Casting audio</string>
-    <string name="password_title">AirPlay password</string>
-    <string name="password_body">Enter the AirPlay password for %1$s.</string>
-    <string name="password_hint">Password</string>
-    <string name="tile_label">AirPlay</string>
-    <string name="tile_subtitle_idle">Tap to pick a device</string>
-    <string name="tile_pick_connecting">Connecting to %1$s</string>
-    <string name="error_projection_grant_invalid">Screen recording permission is invalid; please grant it again</string>
-    <string name="error_audio_interrupted">Audio casting was interrupted</string>
-    <string name="error_audio_permission_needed">Microphone permission is needed to capture system sound</string>
-    <string name="error_cast_interrupted">Casting was interrupted</string>
-    <string name="error_receiver_disconnected">The receiver ended the session</string>
-    <string name="error_password_required">Password was rejected</string>
-    <string name="error_mdns_failed">mDNS discovery failed to start</string>
-    <string name="error_pairing_throttled">The receiver is throttling pairing attempts after failures. Toggle its AirPlay receiver off and on (or wait about 30 minutes), then try again.</string>
+    <string name="receiver_audio_only">เฉพาะเสียง</string>
+    <string name="state_password_required">จำเป็นต้องใช้รหัสผ่าน</string>
+    <string name="state_streaming_audio">กำลังส่งเสียงขึ้นทีวี</string>
+    <string name="password_title">รหัสผ่าน AirPlay</string>
+    <string name="password_body">ใส่รหัสผ่าน AirPlay สำหรับ %1$s</string>
+    <string name="password_hint">รหัสผ่าน</string>
+    <string name="tile_label">Live Screen</string>
+    <string name="tile_subtitle_idle">แตะเพื่อเลือกทีวี</string>
+    <string name="tile_pick_connecting">กำลังเชื่อมต่อไปยัง %1$s</string>
+    <string name="error_projection_grant_invalid">ยังไม่ได้รับสิทธิ์แชร์หน้าจอ โปรดกดอนุญาต</string>
+    <string name="error_audio_interrupted">การส่งสัญญาณเสียงขัดข้อง</string>
+    <string name="error_audio_permission_needed">จำเป็นต้องใช้สิทธิ์ไมโครโฟนเพื่อบันทึกเสียงระบบ</string>
+    <string name="error_cast_interrupted">การสะท้อนหน้าจอถูกขัดจังหวะ</string>
+    <string name="error_receiver_disconnected">การเชื่อมต่อสิ้นสุด ทีวีตัดการเชื่อมต่อหรือถูกปิด</string>
+    <string name="error_password_required">รหัสผ่านไม่ถูกต้อง</string>
+    <string name="error_mdns_failed">ค้นหาอุปกรณ์ใน Wi-Fi ไม่สำเร็จ</string>
+    <string name="error_pairing_throttled">ทีวีปฏิเสธการจับคู่ชั่วคราวเนื่องจากรหัสผิดหลายครั้ง โปรดปิด-เปิดฟังก์ชัน AirPlay บนทีวีใหม่แล้วลองอีกครั้ง</string>
 </resources>

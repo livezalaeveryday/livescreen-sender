@@ -91,6 +91,7 @@ fun ReceiverCard(
     // two consent dialogs cancelled each other out).
     Card(
         shape = RoundedCornerShape(cornerRadius),
+        border = androidx.compose.foundation.BorderStroke(1.dp, androidx.compose.ui.graphics.Color(0xFF262626)),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
         ),

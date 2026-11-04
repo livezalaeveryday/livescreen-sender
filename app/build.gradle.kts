@@ -12,7 +12,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.henry.kite"
+        applicationId = "com.livezala.livescreen.sender"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
@@ -38,10 +38,9 @@ android {
         // A release is the clean version — the suffix logic below deliberately
         // does not exist here, so no environment variable can dirty it.
         release {
-            signingConfigs.findByName("release")?.takeIf { it.storeFile != null }?.let {
-                signingConfig = it
-            }
-            isMinifyEnabled = true
+            signingConfig = signingConfigs.findByName("release")?.takeIf { it.storeFile != null }
+                ?: signingConfigs.getByName("debug")
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",

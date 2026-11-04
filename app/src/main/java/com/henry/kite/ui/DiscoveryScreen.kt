@@ -1,5 +1,17 @@
 package com.henry.kite.ui
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Surface
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -81,7 +93,36 @@ fun DiscoveryScreen(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             LargeTopAppBar(
-                title = { Text(stringResource(R.string.discovery_title)) },
+                title = {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    ) {
+                        LivezalaLogoBadge()
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            Text(
+                                text = stringResource(R.string.discovery_title),
+                                fontWeight = FontWeight.Bold,
+                            )
+                            Surface(
+                                shape = RoundedCornerShape(4.dp),
+                                color = Color(0xFF221A08),
+                                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF4A3512)),
+                            ) {
+                                Text(
+                                    text = "AIRPLAY",
+                                    color = Color(0xFFE9A13B),
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                )
+                            }
+                        }
+                    }
+                },
                 actions = {
                     IconButton(onClick = onOpenSettings) {
                         Icon(
@@ -239,5 +280,33 @@ private fun SessionControls(sessionState: SessionState, onStopMirroring: () -> U
                 )
             }
         }
+    }
+}
+
+@Composable
+fun LivezalaLogoBadge(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .size(36.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0xFF161616))
+            .border(1.5.dp, Color(0xFF4A3512), RoundedCornerShape(8.dp)),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = "L",
+            color = Color(0xFFF5F5F5),
+            fontSize = 19.sp,
+            fontWeight = FontWeight.Black,
+            fontFamily = FontFamily.Monospace,
+        )
+        Box(
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .padding(top = 5.dp, end = 5.dp)
+                .size(6.dp)
+                .clip(CircleShape)
+                .background(Color(0xFFFF8A3D)),
+        )
     }
 }

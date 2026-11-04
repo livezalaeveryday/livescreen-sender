@@ -2,66 +2,93 @@ package com.henry.kite.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Fallback palette for devices without dynamic color (below API 31).
-// Source hue is a cyan-leaning blue, picked so the "casting" accent reads as
-// active rather than alarming.
+// Livezala Brand Design System Colors (from livezala.com & src/styles.css)
+// Main background: #0A0A0A
+// Card surfaces: #101010 / #161616 / #1A1A1A
+// Borders: #262626 / #2E2E2E
+// Typography: Main #F5F5F5, Secondary #A3A3A3, Muted #737373
+// Brand Gold: #E9A13B, Hover: #D28A26, Badge Bg: #221A08, Badge Border: #4A3512
+// Logo Orange: #FF8A3D (accent dot)
+// Status: Success #4ADE80, Danger/Error #F87171
 
-val primaryLight = Color(0xFF00639A)
-val onPrimaryLight = Color(0xFFFFFFFF)
-val primaryContainerLight = Color(0xFFCEE5FF)
-val onPrimaryContainerLight = Color(0xFF001D33)
-val secondaryLight = Color(0xFF51606F)
+val brandGold = Color(0xFFE9A13B)
+val brandGoldHover = Color(0xFFD28A26)
+val brandGoldMuted = Color(0x26E9A13B)
+val brandOrange = Color(0xFFFF8A3D)
+val brandDarkBg = Color(0xFF0A0A0A)
+val brandCard = Color(0xFF161616)
+val brandCardSubtle = Color(0xFF101010)
+val brandCardElevated = Color(0xFF1A1A1A)
+val brandBorder = Color(0xFF262626)
+val brandBorderLight = Color(0xFF2E2E2E)
+val brandText = Color(0xFFF5F5F5)
+val brandTextSecondary = Color(0xFFA3A3A3)
+val brandTextMuted = Color(0xFF737373)
+val brandSuccess = Color(0xFF4ADE80)
+val brandDanger = Color(0xFFF87171)
+
+// Dark Palette (Primary palette used everywhere)
+val primaryDark = brandGold
+val onPrimaryDark = Color(0xFF0A0A0A)
+val primaryContainerDark = Color(0xFF221A08)
+val onPrimaryContainerDark = brandGold
+
+val secondaryDark = Color(0xFFD4AF37)
+val onSecondaryDark = Color(0xFF0A0A0A)
+val secondaryContainerDark = Color(0xFF1A1A1A)
+val onSecondaryContainerDark = Color(0xFFF5F5F5)
+
+val tertiaryDark = brandOrange
+val onTertiaryDark = Color(0xFFFFFFFF)
+val tertiaryContainerDark = Color(0xFF2D1807)
+val onTertiaryContainerDark = brandOrange
+
+val errorDark = brandDanger
+val onErrorDark = Color(0xFF0A0A0A)
+val errorContainerDark = Color(0xFF331111)
+val onErrorContainerDark = brandDanger
+
+val backgroundDark = brandDarkBg
+val onBackgroundDark = brandText
+val surfaceDark = brandCard
+val onSurfaceDark = brandText
+val surfaceVariantDark = brandCardElevated
+val onSurfaceVariantDark = brandTextSecondary
+val outlineDark = brandBorder
+val outlineVariantDark = brandBorderLight
+val surfaceContainerLowestDark = brandDarkBg
+val surfaceContainerLowDark = brandCardSubtle
+val surfaceContainerDark = brandCard
+val surfaceContainerHighDark = brandCardElevated
+val surfaceContainerHighestDark = Color(0xFF222222)
+
+// Light Palette (kept consistent with warm dark-neutral aesthetic)
+val primaryLight = brandGold
+val onPrimaryLight = Color(0xFF0A0A0A)
+val primaryContainerLight = Color(0xFFFFF3D6)
+val onPrimaryContainerLight = Color(0xFF3B2600)
+val secondaryLight = Color(0xFF715B2F)
 val onSecondaryLight = Color(0xFFFFFFFF)
-val secondaryContainerLight = Color(0xFFD4E4F6)
-val onSecondaryContainerLight = Color(0xFF0D1D2A)
-val tertiaryLight = Color(0xFF67587A)
+val secondaryContainerLight = Color(0xFFFCE1B8)
+val onSecondaryContainerLight = Color(0xFF261A00)
+val tertiaryLight = brandOrange
 val onTertiaryLight = Color(0xFFFFFFFF)
-val tertiaryContainerLight = Color(0xFFEDDCFF)
-val onTertiaryContainerLight = Color(0xFF221533)
+val tertiaryContainerLight = Color(0xFFFFDBCF)
+val onTertiaryContainerLight = Color(0xFF380D00)
 val errorLight = Color(0xFFBA1A1A)
 val onErrorLight = Color(0xFFFFFFFF)
 val errorContainerLight = Color(0xFFFFDAD6)
 val onErrorContainerLight = Color(0xFF410002)
-val backgroundLight = Color(0xFFF7F9FF)
-val onBackgroundLight = Color(0xFF181C20)
-val surfaceLight = Color(0xFFF7F9FF)
-val onSurfaceLight = Color(0xFF181C20)
-val surfaceVariantLight = Color(0xFFDDE3EA)
-val onSurfaceVariantLight = Color(0xFF41474D)
-val outlineLight = Color(0xFF71787E)
-val outlineVariantLight = Color(0xFFC1C7CE)
-val surfaceContainerLowestLight = Color(0xFFFFFFFF)
-val surfaceContainerLowLight = Color(0xFFF1F4F9)
-val surfaceContainerLight = Color(0xFFEBEEF4)
-val surfaceContainerHighLight = Color(0xFFE5E8EE)
-val surfaceContainerHighestLight = Color(0xFFDFE3E8)
-
-val primaryDark = Color(0xFF96CCFF)
-val onPrimaryDark = Color(0xFF003353)
-val primaryContainerDark = Color(0xFF004A75)
-val onPrimaryContainerDark = Color(0xFFCEE5FF)
-val secondaryDark = Color(0xFFB8C8DA)
-val onSecondaryDark = Color(0xFF233240)
-val secondaryContainerDark = Color(0xFF394857)
-val onSecondaryContainerDark = Color(0xFFD4E4F6)
-val tertiaryDark = Color(0xFFD2BFE7)
-val onTertiaryDark = Color(0xFF382A4A)
-val tertiaryContainerDark = Color(0xFF4F4061)
-val onTertiaryContainerDark = Color(0xFFEDDCFF)
-val errorDark = Color(0xFFFFB4AB)
-val onErrorDark = Color(0xFF690005)
-val errorContainerDark = Color(0xFF93000A)
-val onErrorContainerDark = Color(0xFFFFDAD6)
-val backgroundDark = Color(0xFF101418)
-val onBackgroundDark = Color(0xFFDFE3E8)
-val surfaceDark = Color(0xFF101418)
-val onSurfaceDark = Color(0xFFDFE3E8)
-val surfaceVariantDark = Color(0xFF41474D)
-val onSurfaceVariantDark = Color(0xFFC1C7CE)
-val outlineDark = Color(0xFF8B9198)
-val outlineVariantDark = Color(0xFF41474D)
-val surfaceContainerLowestDark = Color(0xFF0B0F12)
-val surfaceContainerLowDark = Color(0xFF181C20)
-val surfaceContainerDark = Color(0xFF1C2024)
-val surfaceContainerHighDark = Color(0xFF272A2F)
-val surfaceContainerHighestDark = Color(0xFF32353A)
+val backgroundLight = Color(0xFF0A0A0A) // Always dark background
+val onBackgroundLight = Color(0xFFF5F5F5)
+val surfaceLight = Color(0xFF161616)
+val onSurfaceLight = Color(0xFFF5F5F5)
+val surfaceVariantLight = Color(0xFF1A1A1A)
+val onSurfaceVariantLight = Color(0xFFA3A3A3)
+val outlineLight = Color(0xFF262626)
+val outlineVariantLight = Color(0xFF2E2E2E)
+val surfaceContainerLowestLight = Color(0xFF0A0A0A)
+val surfaceContainerLowLight = Color(0xFF101010)
+val surfaceContainerLight = Color(0xFF161616)
+val surfaceContainerHighLight = Color(0xFF1A1A1A)
+val surfaceContainerHighestLight = Color(0xFF222222)
