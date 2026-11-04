@@ -1,61 +1,52 @@
-# Kite
+# Live Screen (Android) — ตัวส่ง AirPlay & สตรีมหน้าจอ
 
-Android AirPlay sender. Mirrors your phone's screen — and plays its sound — on
-a Mac, Apple TV, or any AirPlay receiver.
+แอปพลิเคชันสะท้อนหน้าจอมือถือขึ้นทีวี ฟรี 100% ไม่มีโฆษณา ไม่จำกัดเวลา ไม่ล็อกความละเอียด ตามอัตลักษณ์แบรนด์ **Livezala Platform**
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+- **Package Name (Universal ID):** `com.livezala.livescreen`
+- **Architecture:** Android Native (Kotlin 2.3+, Jetpack Compose, Material 3, Android 10+ / API 29-37)
+- **AirPlay Protocol:** Screen Mirroring + RAOP + mDNS Discovery + Hardware MediaCodec H.264 + ALAC System Audio
 
-## Releases
+---
 
-[![GitHub Release](https://img.shields.io/github/v/release/itsHenry35/Kite?style=flat-square&label=latest)](https://github.com/itsHenry35/Kite/releases)
+## 1. จุดเด่นและการทำงาน (Features)
 
-## Screenshots
+1. **เส้นทาง 2 แตะ (2-Tap Flow):**
+   - เปิดแอป ➔ ระบบสแกนหาทีวีในวง Wi-Fi ด้วย mDNS (`_airplay._tcp`, `_raop._tcp`) อัตโนมัติ
+   - แตะชื่อทีวี ➔ เริ่มสะท้อนหน้าจอทันที ไร้หน้าคั่น ไม่มีโฆษณาคั่น
+2. **การเข้ารหัสระดับฮาร์ดแวร์ (Hardware MediaCodec):**
+   - ดึงหน้าจอผ่าน Android `MediaProjection` API
+   - ส่งตรงเข้า `VirtualDisplay` ที่ผูกกับฮาร์ดแวร์ `MediaCodec` (H.264) ให้ความหน่วงต่ำ (<150ms)
+3. **รองรับ 3 ปลายทางหลัก:**
+   - Apple TV (AirPlay 1 / 2 พร้อมระบบ PIN pairing)
+   - Smart TVs (Samsung, LG, Sony ฯลฯ ที่มี AirPlay ในตัว)
+   - Live Screen TV Receiver (`com.livezala.livescreen` บน Android TV / Google TV / Fire TV)
+4. **ชุดสีและอัตลักษณ์ Livezala Brand:**
+   - พื้นหลังหลัก: `#0A0A0A`
+   - การ์ด/พื้นผิว: `#161616` / `#1A1A1A` / `#101010`
+   - เส้นขอบ: `#262626` / `#2E2E2E`
+   - สีทองเน้นแบรนด์: `#E9A13B` (พร้อมกล่องทองเข้ม `#221A08` ขอบ `#4A3512`)
+   - จุดส้มโลโก้: `#FF8A3D`
 
-<p align="center">
-  <img src="images/home.png" width="270" alt="Receiver discovery">
-  <img src="images/settings.png" width="270" alt="Settings">
-</p>
+---
 
-## Features
+## 2. โครงสร้างโมดูล (Module Structure)
 
-- Mirror your screen to a Mac, Apple TV, or any AirPlay receiver
-- Sound included: long-press a receiver to choose screen with sound, screen
-  without sound, or sound only
-- One-time pairing on Mac and Apple TV — enter the PIN shown on screen once,
-  then every connection just works
-- Adjustable resolution, frame rate and bit rate (up to 200 Mbps)
-- Finds receivers on your Wi-Fi automatically, including open receivers like
-  UxPlay
-- Quick Settings tile and one-tap log sharing
+- `:app` — หน้าจอ UI Jetpack Compose, Discovery, Settings, Device Mode Detection, Quick Settings Tile, Foreground Service
+- `:airplay` — เอนจินโปรโตคอล AirPlay (mDNS, RTSP, Pair-Setup, Pair-Verify, FairPlay, ChaCha20-Poly1305, SRP6a, Plist)
+- `:capture` — ระบบแคปเจอร์ภาพหน้าจอ MediaProjection, MediaCodec H.264 Encoder, ALAC Audio Encoder
 
-## Requirements
+---
 
-- Android 10 or later (minSdk 29)
-- A real device on the same Wi-Fi network as the receiver
-- An AirPlay receiver
+## 3. คำสั่ง Build ซ้ำได้ (Reproducible Build)
 
-## Building
+```powershell
+$env:JAVA_HOME = "C:\Users\araws\.gradle\jdks\eclipse_adoptium-17-amd64-windows.2"
+$env:ANDROID_HOME = "C:\Users\araws\AppData\Local\Android\Sdk"
+$env:Path = "$env:JAVA_HOME\bin;$env:ANDROID_HOME\platform-tools;$env:Path"
 
-```sh
-./gradlew :app:assembleDebug
+cd "F:\livescreen-sender"
+.\gradlew.bat :app:assembleRelease
 ```
 
-## Acknowledgements
-
-Kite builds on years of open-source AirPlay work. Thanks to:
-
-- [doubletake](https://github.com/omarroth/doubletake) — Go AirPlay sender;
-  parts of Kite are Kotlin ports of it
-- [UxPlay](https://github.com/FDH2/UxPlay) — open-source AirPlay receiver; a
-  key reference during development
-- [pyatv](https://github.com/postlund/pyatv) — AirPlay 2 protocol reference
-- [shairport-sync](https://github.com/mikebrady/shairport-sync) — pairing and
-  timing reference
-- [openairplay](https://github.com/openairplay/airplay-spec) — early protocol
-  documentation
-
-## License
-
-Kite is released under the GNU LGPL-3.0 — see [LICENSE](LICENSE). Ported files
-carry doubletake's license. Open-source attributions are also listed in the app
-under Settings → About.
+ไฟล์ผลลัพธ์:
+`F:\livescreen-sender\app\build\outputs\apk\release\app-release.apk`
